@@ -1,8 +1,12 @@
 <h2>List of animals:</h2>
 <ul>
-  <li *ngFor = "let animal of animals">{{animal.name}}</li>
+  <li *ngFor = "let animal of animals">
+    <app-listing-item [animal] = "animal"></app-listing-item>
+  </li>
 </ul>
 <h2>List of cats:</h2>
 <ul>
-  <li *ngFor = "let cat of cats">{{cat.name}}</li>
+  <li *ngFor = "let cat of cats">
+    <app-listing-item [animal] = "cat"></app-listing-item>
+  </li>
 </ul>

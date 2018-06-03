@@ -7,13 +7,15 @@ import { AnimalsService } from './services/animals.service';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ListingComponent } from './components/listing/listing.component';
+import { ListingItemComponent } from './components/listing-item/listing-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    ListingComponent
+    ListingComponent,
+    ListingItemComponent
   ],
   imports: [
     BrowserModule
