@@ -19,8 +19,8 @@ export class AnimalsService {
 
   constructor() { }
 
-  changeAnimals(newComic){
-    this.animalsBSubject.next(newComic);
+  changeAnimals(animals){
+    this.animalsBSubject.next(animals);
   }
 
   addAnimal(animal){
