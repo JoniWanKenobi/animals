@@ -15,14 +15,17 @@ export class HomepageComponent implements OnInit {
   constructor(private animaleService: AnimalsService) { }
 
   ngOnInit() {
-    this.animaleService.latestAnimals.subscribe((animals) => {
-      this.useAnimals(animals);      
-    })
+    this.animaleService.latestAnimals
+    .subscribe((animals) => this.useAnimals(animals));
   }
 
   useAnimals(animals){
     this.animals = animals;
-    this.cats = animals.filter((animal) => animal.type === 'cat');
+    this.cats = this.onlyCats(animals);
+  }
+
+  onlyCats(animals){
+    return animals.filter((animal) => animal.type === 'cat');
   }
 
   addFelix(){
